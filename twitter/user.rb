@@ -19,11 +19,15 @@ class User
 		@password = pass
 		@tweetlist = []
 		@followers = []
-		@follows = []
+		@following = []
 		@@userlist.push(self)
 	end
 
 	def self.sign_up
+		# def sign_up(username, password)
+		# user = User.new(username, password)
+		# @@users.push(user)
+
 		puts "====== sign up ======"
 		puts "What is your username?"
 		username = gets.chomp
@@ -39,6 +43,11 @@ class User
 	end
 
 	def sign_in
+		# sign_in(username, password)
+		# @@userlist.each do |user|
+		# if user.username == username && user.password == password
+		#   $session = user
+
 		if @@userlist.include?(self)
 			puts "please sign in"
 			puts "what is your username?"
@@ -82,7 +91,28 @@ class User
 
 	def follow
 		puts "Who do you want to follow?"
-		
+		user_to_follow = gets.chomp
+		idx = @@userlist.each{|user| user.username == user_to_follow}
+		if idx != nil
+			following.push(@@userlist[idx])
+			puts "successfully followed!"
+			# is this correct? want to add this user to the follower list of the user they just followed
+			@@userlist[idx].followers.push(self)
+		else
+			puts "sorry, can't find that user"
+		end
+	end
+
+	def unfollow
+		puts "Who do you want to unfollow?"
+		user_to_unfollow = gets.chomp
+		idx = @@userlist.each{|user| user.username == user_to_unfollow}
+		if idx != nil
+			following.delete_at(idx)
+			puts "successfully unfollowed!"
+		else
+			puts "Sorry, can't find that user"
+		end
 	end
 end	
 
