@@ -1,0 +1,12 @@
+<h1> Show us all the users </h1>
+
+users should be here...
+<% @users.each do |user| %>
+<div><%= user.username %></div>
+<div><%= user.password %></div>
+<% end %>
+
+<!-- rails.console
+Users.create({username: "Lanya", password: "poop"})
+
+< % = displays information to the screen so you don't need them for for loops -->
