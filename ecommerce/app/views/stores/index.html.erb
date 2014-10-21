@@ -1,0 +1,26 @@
+<h2>Welcome to Stores</h2>
+List of stores
+
+<!-- this is a list of stores, names should be links -->
+<!-- currently not working -->
+<% @stores.each do |store| %>
+<div><%= store.name %></div>
+<div><%= store.location %></div>
+<% end %>
+
+<!-- 
+<%= form_for @stores do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p> -->
+<% end %>
