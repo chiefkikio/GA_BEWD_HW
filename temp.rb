@@ -4,7 +4,6 @@
 
 =begin
 This is a control structure exercise for General Assembly's Ruby on Rails course. 
-
 =end
 
 def temp(n, celsius_flag)
