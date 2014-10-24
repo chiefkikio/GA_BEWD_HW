@@ -13,11 +13,23 @@ Rails.application.routes.draw do
   get "/stores" => "stores#index"
   get "/products" => "products#index"
 
+  # ***********
+  # store 3 
+  #   product 1
+  #   product 2
+  #   product 5 -> /products/5 
+
+  #resources :products is the short hand so you don't haev to keep writing out
+  # get "stores/3" => "stores#3" 
+  # might also have to write custom routes for outside API's 
+  # ***********
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
 
   # Example resource route with options:
   #   resources :products do

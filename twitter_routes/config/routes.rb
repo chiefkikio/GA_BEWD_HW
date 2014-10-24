@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :puppies
+
+  # this defines top level blocks on its own and on the inside 
+  # you want to nest them (belonging to users)
+  resources :users do 
+    resources :puppies
+  end
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

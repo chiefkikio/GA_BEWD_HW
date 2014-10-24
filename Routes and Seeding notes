@@ -1,0 +1,39 @@
+Routes and Seeding
+What is REST? 
+	* REpresentational State Transfer (making URL's that are descriptive)
+	* Key
+		- base url like http://localhost:3000/users
+		- additional indicator of the information we'd like to send ike http://localhost:3000/users/1
+		- media type to return like html, plaintext, JSON
+		- standard HTTP verb: GET, PUT, POST, DELETE
+			- GET is the type for when you don't have any data
+			- PUT, POST, DELETE don't have data in the URL
+				- PUT: modifying resource
+				- POST: for creating new users or adding information (new entity)
+				- DELETE: delete a resouce (ie DELETE/users/1)
+	* CRUD actions (Create, read, update and delete) - basic functions of storage
+
+RAILS AND REST
+	* rails uses restful routing by default
+
+EXAMPLE URL'S:
+	* if you want to get a profile
+		get 'profile/:id', to 'users#show'
+
+RESOURCES:photos gives 7 routelines automatically 
+	GET /photos
+	GET /photos/new
+	POST /photos
+	GET /photos/:id
+	GET /photos/:id/edit
+	PATCH/PUT /photos/:id
+	DELETE /photos/:id
+
+you could have separate controllers for admins
+or you could just have just one controller
+
+SEEDING THE DATABASE
+* we don't store the data in version control cuz that would be huge
+* If we want to get up and running on the project, they can just clone and then seed
+* seeding = populating database with default data
+

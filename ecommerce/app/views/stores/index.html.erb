@@ -8,19 +8,7 @@ List of stores
 <div><%= store.location %></div>
 <% end %>
 
-<!-- 
-<%= form_for @stores do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :location %><br>
-    <%= f.text_area :location %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p> -->
+
+<%= link_to 'New Store', new_store_path %>
+
 <% end %>
